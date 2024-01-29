@@ -19,7 +19,7 @@ def receive_data(client_socket, target_socket):
                 target_socket.send(client_data)
     except: 
         pass
-    print("[*] receive_data socket closed")
+    print("[x] receive_data socket closed")
 
 # Function to handle transmitting data to the client
 def transmit_data(client_socket, target_socket):
@@ -33,7 +33,7 @@ def transmit_data(client_socket, target_socket):
                 client_socket.send(target_response)
     except:
         pass
-    print("[*] transmit_data socket closed")
+    print("[x] transmit_data socket closed")
 
 
 
@@ -99,7 +99,7 @@ def keyboard_input():
     global bridge_list_index
     time.sleep(1)
     while True:
-        cmd = input("bridge> ")
+        cmd = input("bridge(%s)>> " % bridge_list_index)
         if cmd == "list":
             print("[*] Ports list:", bridge_list)
         elif cmd == "n": 
