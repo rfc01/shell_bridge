@@ -124,10 +124,10 @@ input_thread = threading.Thread(target=keyboard_input)
 input_thread.start()
 
 # Define the server and target details
-server_host = 'localhost'  # Change this to your server's IP address
-server_port = 2222  # Change this to your desired port
+server_host = '0.0.0.0'  # Change this to your server's IP address
+server_port = 4444  # Change this to your desired port
 
-target_host = 'localhost'  # Change this to your target's IP address
+target_host = '0.0.0.0'  # Change this to your target's IP address
 target_port = 10001  # Change this to your target's port
 
 # Start the server
